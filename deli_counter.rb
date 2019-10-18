@@ -1,15 +1,15 @@
 katz_deli = ["Moshe", "Fayge", "Rivki"]
 
 
-def line(array) # this was the one I figured out
+def line(array) 
   if array.length >= 1
-    nuarray = []
+    dearray = []
     counter = 1 
     array.each do |name|
-      nuarray.push("#{counter}. #{name}")
+      dearray.push("#{counter}. #{name}")
       counter += 1 
     end 
-    puts "The line is currently: #{nuarray.join(" ")}"
+    puts "The line is currently: #{dearray.join(" ")}"
   else
     puts "The line is currently empty."
   end
@@ -17,10 +17,9 @@ end
 
 line(katz_deli)
 
-def line_simple(array) # this one follows the same mechanics as learn.co
+def line_simple(array) 
   current_line = "The simple line is currently:"
   array.each.with_index(1) do |value, indexemus|  
-  # "each.with_index" is the method...must use "index"
     current_line << " #{indexemus}. #{value},"    
     
   end 
